@@ -1,5 +1,5 @@
 {% set name = "bottleneck" %}
-{% set version = "1.3.5" %}
+{% set version = "1.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Bottleneck-{{ version }}.tar.gz
-  sha256: 2c0d27afe45351f6f421893362621804fa7dea14fe29a78eaa52d4323f646de7
+  sha256: bc15e2545d4282d6f2529597df1bd6e4c5f0c44296b3f8425bc835305bd943c9
 
 build:
   number: 0
