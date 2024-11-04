@@ -63,3 +63,6 @@ extra:
     - wesm
     - ocefpaf
     - qwhelan
+  skip-lints:
+    - invalid_url
+    - host_section_needs_exact_pinnings
