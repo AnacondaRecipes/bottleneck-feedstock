@@ -26,7 +26,7 @@ requirements:
     - versioneer
   run:
     - python
-    - numpy >=2.0.0
+    - numpy
 
 test:
   requires:
