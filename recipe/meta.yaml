@@ -1,5 +1,5 @@
 {% set name = "bottleneck" %}
-{% set version = "1.4.2" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bottleneck-{{ version }}.tar.gz
-  sha256: fa8e8e1799dea5483ce6669462660f9d9a95649f6f98a80d315b84ec89f449f4
+  sha256: 028d46ee4b025ad9ab4d79924113816f825f62b17b87c9e1d0d8ce144a4a0e31
 
 build:
-  skip: True  # [py<39]
-  number: 1
+  skip: True  # [py<310]
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -21,9 +21,8 @@ requirements:
   host:
     - python
     - pip
-    - numpy {{ numpy }}
+    - numpy
     - setuptools
-    - wheel
     - versioneer
   run:
     - python
@@ -65,5 +64,4 @@ extra:
     - ocefpaf
     - qwhelan
   skip-lints:
-    - invalid_url
     - host_section_needs_exact_pinnings
